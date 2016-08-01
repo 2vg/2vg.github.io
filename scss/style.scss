@@ -1,0 +1,44 @@
+$colors: (
+  background: #292b37,
+  unicorn1: #52bc57,
+  unicorn2: #00aba4,
+  unicorn3: #dc3b3b,
+  unicorn4: #8884c5,
+  unicorn5: #d28e5d,
+  unicorn6: #b73999,
+  unicorn7: #fff,
+  unicorn8: #94c66e
+);
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
+
+body {
+  background: map-get($colors, 'background');
+  color: map-get($colors, 'unicorn1');
+  margin: 2em 22px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  @media screen and (min-width: 750px) {
+    font-size: 20px;
+  }
+  
+  @media screen and (min-width: 1100px) {
+    font-size: 24px;
+  }
+}
+
+.wwdc__marketingfoobar {
+  margin-bottom: 80px;
+  color: map-get($colors, 'unicorn8');
+}
+
+@for $i from 1 through 7 {
+  .unicorn#{$i} {
+    color: map-get($colors, 'unicorn#{$i}');
+  }
+}
