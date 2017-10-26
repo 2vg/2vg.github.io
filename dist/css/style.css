@@ -1,5 +1,19 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 
+#avatar {
+  max-width: 50px;
+  border-radius: 100%;
+}
+
+a {
+  transition:all .7s;
+}
+
+a:hover {
+  text-decoration:none;
+  opacity:1;
+}
+
 .unicorn1 {
   color: #52bc57;
   font-family: 'Noto Sans Japanese', sans-serif;
